@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import Contexto from "../contexts/Contexto";
+import useExemplo from "../hooks";
 
 function C(){
-    const {nome,idade} = useContext(Contexto);
-    return <div>Nome: {nome} Idade: {idade} </div>;
+    const {cep} = useExemplo();
+    return <div>{JSON.stringify(cep)}</div>;
 }
 
 export default C;
